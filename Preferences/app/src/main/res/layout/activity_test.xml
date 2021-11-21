@@ -6,81 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Test">
 
-    <Button
-        android:id="@+id/rectangle2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:onClick="ButtonClick"
-        android:text="Rect"
-        app:layout_constraintStart_toEndOf="@+id/circle"
-        app:layout_constraintTop_toTopOf="@+id/circle" />
-
-    <Button
-        android:id="@+id/triangle3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:onClick="ButtonClick"
-        android:text="T2"
-        app:layout_constraintStart_toEndOf="@+id/triangle4"
-        app:layout_constraintTop_toBottomOf="@+id/circle" />
-
-    <Button
-        android:id="@+id/trapez2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:onClick="ButtonClick"
-        android:text="Trap"
-        app:layout_constraintStart_toEndOf="@+id/triangle3"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle2" />
-
-    <Button
-        android:id="@+id/triangle4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
-        android:onClick="ButtonClick"
-        android:text="T1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle2" />
-
-    <Button
-        android:id="@+id/parraler2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:onClick="ButtonClick"
-        android:text="Parr"
-        app:layout_constraintStart_toEndOf="@+id/triangle4"
-        app:layout_constraintTop_toBottomOf="@+id/trapez2" />
-
-    <Button
-        android:id="@+id/circle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:onClick="ButtonClick"
-        android:text="Cir"
-        app:layout_constraintStart_toEndOf="@+id/square2"
-        app:layout_constraintTop_toTopOf="@+id/square2" />
-
-    <Button
-        android:id="@+id/square2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="2dp"
-        android:onClick="ButtonClick"
-        android:text="Sq"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parametrs" />
-
     <LinearLayout
         android:id="@+id/shapesView"
         android:layout_width="400dp"
@@ -104,6 +29,7 @@
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/shapesView"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
@@ -116,6 +42,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="number"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/shapesView"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
@@ -129,6 +56,7 @@
         android:onClick="ButtonClick"
         android:text="OK"
         android:textSize="14sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shapesView"
         tools:ignore="TouchTargetSizeCheck" />
@@ -139,6 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
         android:layout_marginTop="-8dp"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/poleField" />
 
@@ -161,4 +90,33 @@
         android:text="L="
         app:layout_constraintStart_toEndOf="@+id/poleField"
         app:layout_constraintTop_toBottomOf="@+id/shapesView" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:onClick="ButtonClick"
+        android:text="Next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poleField" />
+
+    <TextView
+        android:id="@+id/textPole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/poleField"
+        app:layout_constraintStart_toStartOf="@+id/poleField" />
+
+    <TextView
+        android:id="@+id/textObw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/obwodField"
+        app:layout_constraintStart_toStartOf="@+id/obwodField" />
 </androidx.constraintlayout.widget.ConstraintLayout>
