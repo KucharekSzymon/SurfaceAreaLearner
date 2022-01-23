@@ -2,42 +2,22 @@ package com.example.lista3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.*;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Learning extends AppCompatActivity {
-    String Login;
-    int Step = 0;
-    Integer Points = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Login = getIntent().getExtras().getString("Login");
-        SharedPreferences prefs = getSharedPreferences(Login,0);
-            Step = prefs.getInt("Step",1);
-            Points = prefs.getInt("Points",1);
-        Toast.makeText(this,"Witaj "+Login+",S: "+Step+",P: "+Points,Toast.LENGTH_LONG).show();
         setContentView(R.layout.activity_learn);
-    }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Step +=1;
-        SharedPreferences prefs = getSharedPreferences(Login,0);
-        SharedPreferences.Editor editor = prefs.edit();
-            editor.putInt("Step",Step);
-            editor.putInt("Points",Points);
-            editor.commit();
     }
 
     private void drawRect()
