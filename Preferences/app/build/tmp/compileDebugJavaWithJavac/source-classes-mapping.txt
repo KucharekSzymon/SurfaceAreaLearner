@@ -1,0 +1,8 @@
+com/example/lista3/BuildConfig.java
+ com.example.lista3.BuildConfig
+com/example/lista3/Learning.java
+ com.example.lista3.Learning
+com/example/lista3/Test.java
+ com.example.lista3.Test
+com/example/lista3/MainActivity.java
+ com.example.lista3.MainActivity
